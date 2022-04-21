@@ -47,7 +47,7 @@ const AddToCart = ({product}) => {
     </div>
     <div className='btn-container'>
       <AmountButtons increase={increase} decrease={decrease} amount={amount} />
-      <Link to='/' className='btn'>add to cart</Link>
+      <Link to='/cart' className='btn'>add to cart</Link>
     </div>
   </Wrapper>
 }
