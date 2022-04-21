@@ -7,5 +7,14 @@ import { FilterProvider } from './context/filter_context'
 import { CartProvider } from './context/cart_context'
 import { UserProvider } from './context/user_context'
 import { Auth0Provider } from '@auth0/auth0-react'
+import {BrowserRouter} from 'react-router-dom'
 
-ReactDOM.render(<App />, document.getElementById('root'))
+ReactDOM.render(
+  <ProductsProvider>
+    <FilterProvider>
+      <BrowserRouter>
+       <App />
+      </BrowserRouter>
+    </FilterProvider>
+  </ProductsProvider>
+    , document.getElementById('root'))
